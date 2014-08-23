@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">GhostMode</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_ghost_mode">GhostMode</string>
+    <string name="high_score_prompt">High score! Enter initials:</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_initials">You got a high score! Enter your initials</string>
+    <string name="high_scores">High Scores:</string>
+    <string name="score_info">Your score was</string>
+    <string name="about">About</string>
+    <string name="about_app">Developed by Killa B. Studios. Are you a bad enough ghost to beat this game?</string>
+    <string name="start_game">Start Game</string>
+    <string name="leaderboard">High Scores</string>
+    <string name="music_question">Music?</string>
+    <string name="app_subtitle">(Now with more Pumpkins)</string>
+
+</resources>

@@ -1,0 +1,232 @@
+package com.kklop.ghostmode.level;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+
+import com.kklop.angmengine.game.exception.GameException;
+import com.kklop.angmengine.game.grid.exception.GridException;
+import com.kklop.angmengine.game.sprite.Sprite;
+import com.kklop.angmengine.game.sprite.StaticSprite;
+import com.kklop.angmengine.game.sprite.hitbox.HitBox;
+import com.kklop.ghostmode.GhostView.GhostThread;
+import com.kklop.ghostmode.R;
+import com.kklop.ghostmode.chars.Collectable;
+import com.kklop.ghostmode.chars.Enemy;
+import com.kklop.ghostmode.event.GhostGameEvent;
+import com.kklop.ghostmode.exception.PropertyManagerException;
+import com.kklop.ghostmode.sound.SoundHelper;
+import com.kklop.ghostmode.utils.Constants;
+import com.kklop.ghostmode.utils.PropertyManager;
+
+public class DesertLevel extends LevelBase  implements Level {
+
+	public DesertLevel(Context context) throws GameException {
+		super(context);
+	}
+
+	private static String TAG = "Level1";
+	
+	public void createLevel(GhostThread ghostThread) 
+			throws GameException {
+		super.createLevel(ghostThread);
+		try {
+			Resources res = ghostThread.getContext().getResources();
+			
+			// init trees
+			int numberTrees = PropertyManager.getNumberTrees();
+			ArrayList<Sprite> florage = new ArrayList<Sprite>();
+			for(int i=0;i<numberTrees;i++) {
+				Bitmap tree = BitmapFactory.
+						decodeResource(res, R.drawable.desert_cactus);
+				int ranX = ghostThread.ranX(tree);
+				int ranY = ghostThread.ranY(tree);
+				StaticSprite sp1 = new StaticSprite(
+						ghostThread.getBound(), 
+						R.drawable.desert_cactus, 
+						ranX, 
+						ranY, 
+						Constants.FPS, 
+						Constants.ENV_TYPE,
+						res
+					);
+				sp1.addHitbox(new HitBox(scale(sp1,10), (sp1.getHeight()-scale(sp1,20)), 
+						sp1.getWidth()-scale(sp1,10), sp1.getHeight()-scale(sp1,5)));
+				florage.add(sp1);
+				ghostThread.getSprites().add(sp1);
+				ghostThread.getGrid().addSprite(sp1);
+				//ghostThread.getTrees().add(sp1);
+			}
+	
+			// init tubleweed
+			int numberGraves = PropertyManager.getNumberGraves();
+			for(int i=0;i<numberGraves;i++) {
+				/* we can share the same bitmap between
+				 * all the sprites because it won't
+				 * need to be manipulated
+				 */
+				Bitmap grave = BitmapFactory.
+						decodeResource(res, R.drawable.tumbleweed);
+				int ranX = ghostThread.ranX(grave);
+				int ranY = ghostThread.ranY(grave);
+				StaticSprite sp2 = new StaticSprite(ghostThread.getBound(), 
+						R.drawable.tumbleweed,
+						ranX,ranY,60, Constants.ENV_TYPE, res);
+				// set hitbox to bottom of gravestone
+				sp2.addHitbox(new HitBox(0, (grave.getHeight()-scale(sp2,20)), 
+						grave.getWidth(), grave.getHeight()-scale(sp2,5)));
+				florage.add(sp2);
+				ghostThread.getSprites().add(sp2);
+				ghostThread.getGrid().addSprite(sp2);
+			}
+//			
+			// init graves2
+//			int numberGraves2 = PropertyManager.getNumberGraves2();
+//			for(int i=0;i<numberGraves2;i++) {
+//				/* we can share the same bitmap between
+//				 * all the sprites because it won't
+//				 * need to be manipulated
+//				 */
+//				Bitmap grave = BitmapFactory.
+//						decodeResource(res, R.drawable.grave2);
+//				int ranX = ghostThread.ranX(grave);
+//				int ranY = ghostThread.ranY(grave);
+//				StaticSprite sp2 = new StaticSprite(ghostThread.getBound(), 
+//						grave,
+//						ranX,ranY,60, Constants.ENV_TYPE);
+//				// set hitbox to bottom of gravestone
+//				sp2.addHitbox(new HitBox(0, (grave.getHeight()-20), 
+//						grave.getWidth(), grave.getHeight()-5));
+//				ghostThread.getSprites().add(sp2);
+//				ghostThread.getGrid().addSprite(sp2);
+//			}
+//			
+			
+			// init chests
+			ArrayList<Sprite> coins = new ArrayList<Sprite>();
+			int numberChests = PropertyManager.getNumberChests();
+			for(int i=0;i<numberChests;i++) {
+				Bitmap chest = BitmapFactory.
+						decodeResource(res, R.drawable.coin);
+				int ranX = ghostThread.ranX(chest);
+				int ranY = ghostThread.ranY(chest);
+				Collectable ch = new Collectable(
+						ghostThread.getBound(), 
+						R.drawable.coin,
+						ranX,
+						ranY,
+						chest.getWidth()/6,
+						chest.getHeight(),
+						20,
+						6,
+						60, 
+						Constants.CHEST_TYPE,
+						true,
+						res,
+						Collectable.COLLECTABLE_TYPE.COIN
+					);
+				ghostThread.getSprites().add(ch);
+				ghostThread.getChests().add(ch);
+				coins.add((Sprite) ch);
+				try {
+					ghostThread.getGrid().addSprite(ch);
+				} catch(GridException g) {
+					Log.e(TAG, "GridException in " +
+							"constructor of GhostView. " + g.getMessage());
+				}
+				
+			}
+			
+			// test code to init 25 enemies
+			int numberEnemies = PropertyManager.getEnemies();
+			ArrayList<Sprite> enemies = new ArrayList<Sprite>();
+			for(int i=0; i<numberEnemies; i++) {
+				Bitmap en = BitmapFactory.
+						decodeResource(res, R.drawable.enemy2_idle_an);
+				int ranX = ghostThread.ranX(en);
+				int ranY = ghostThread.ranY(en);
+				Enemy enemy = new Enemy(
+						ghostThread.getContext(),
+						ghostThread.getBound(), 
+						R.drawable.enemy2_idle_an,
+						ranX,
+						ranY,
+						en.getWidth()/4,
+						en.getHeight(),
+						5,
+						4,
+						60, 
+						Constants.ENEMY_TYPE,
+						true,
+						R.drawable.enemy2_idle_an,
+						4,
+						R.drawable.enemy2_an,
+						4,
+						R.drawable.enemy2__freeze_an,
+						4,
+						res
+					);
+				enemies.add(enemy);
+				ghostThread.getSprites().add(enemy);
+				ghostThread.getEnemies().add(enemy);
+				try {
+					ghostThread.getGrid().addSprite(enemy);
+				} catch(GridException g) {
+					Log.e(TAG, "GridException in " +
+							"constructor of GhostView. " + g.getMessage());
+				}
+			}
+			
+			ArrayList<Sprite> potions = this.generatePotions(ghostThread);			
+			
+			StaticSprite fence = new StaticSprite(ghostThread.getBound(), 
+					R.drawable.fence_horiz2,
+					300,300,60, Constants.ENV_TYPE, res);
+			StaticSprite fence2 = new StaticSprite(ghostThread.getBound(), 
+					R.drawable.fence_horiz2,
+					300+fence.getWidth(),300,60, Constants.ENV_TYPE, res);
+			ghostThread.getSprites().add(fence);
+			ghostThread.getSprites().add(fence2);
+			try {
+				ghostThread.getGrid().addSprite(fence);
+				ghostThread.getGrid().addSprite(fence2);
+			} catch(GridException g) {
+				Log.e(TAG, "GridException in " +
+						"constructor of GhostView. " + g.getMessage());
+			}
+			
+			SoundHelper.getInstance().setMusic(
+					ghostThread.getContext().getAssets().openFd("ghostmusic.mp3"));
+			
+			// welcome message event
+			ghostThread.getEvents().add(new GhostGameEvent(Constants.FPS, 
+					GhostGameEvent.EVENT_TYPE.
+					WELCOME));
+			
+			LevelUtil.replaceIfCollision(ghostThread, enemies);
+			LevelUtil.replaceIfCollision(ghostThread, florage);
+			LevelUtil.replaceIfCollision(ghostThread, coins, false);
+			LevelUtil.replaceIfCollision(ghostThread, potions, false);
+		} catch(PropertyManagerException e) {
+			throw new GameException("PropertyManagerException exception" +
+					" in method createLevel " + e);
+		} catch(IOException e) {
+			throw new GameException(e);
+		}
+	}
+
+	@Override
+	public int getMapSize() throws GameException {
+		return gridMap.getWdith();
+	}
+
+	@Override
+	public String getLevelName() throws GameException {
+		return Constants.DESERT_LEVEL;
+	}
+}
