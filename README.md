@@ -10,7 +10,7 @@ https://play.google.com/store/apps/details?id=com.kklop.ghostmode
 
 To build 
 
-'''
+```
 git clone git@github.com:kklopfenstein/AnGmEngine.git
 git clone git@github.com:kklopfenstein/GhostMode.git
 cd AnGmEngine
@@ -18,6 +18,6 @@ android update project -p .
 cd ../GhostMode
 android update project -p .
 ant release
-'''
+```
 
 
