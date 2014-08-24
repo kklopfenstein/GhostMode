@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='GitLab Enterprise Edition' name='description'>
+<title>
+F-Droid / fdroidclient | 
+GitLab
+</title>
+<link href="/assets/favicon-baaa14bade1248aa6165e9d34e7d83c0.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="/assets/application-dca993835b2a9c3e961a0509caa71683.css" media="all" rel="stylesheet" />
+<link href="/assets/print-1df3ea9b8ff148a6745321899e0cb213.css" media="print" rel="stylesheet" />
+<script src="/assets/application-2fb34ccf7edfc1db2b298c9f4a0123b5.js"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="RYmBBw16YS8SngJHKMvvhFvSdeM9w7nOLL8IC7XF0gg=" name="csrf-token" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.default_issues_tracker="gitlab";gon.api_version="v3";gon.relative_url_root="";gon.default_avatar_url="https://gitlab.com/assets/no_avatar-adffbfe10d45b20495cd2a9b88974150.png";
+//]]>
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37019925-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</head>
+
+<body class='ui_mars application' data-page='projects:blob:show'>
+
+<header class='navbar navbar-static-top navbar-gitlab'>
+<div class='navbar-inner'>
+<div class='container'>
+<div class='app_logo'>
+<span class='separator'></span>
+<a class="home" href="/explore"><h1>GITLAB</h1>
+</a><span class='separator'></span>
+</div>
+<h1 class='title'><span><a href="/u/fdroid">F-Droid</a> / fdroidclient</span></h1>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<i class='icon-reorder'></i>
+</button>
+<div class='pull-right hidden-xs'>
+<a class="btn btn-sign-in btn-new" href="/users/sign_in?redirect_to_referer=yes">Sign in</a>
+</div>
+<div class='navbar-collapse collapse'>
+<ul class='nav navbar-nav'>
+<li class='visible-xs'>
+<a href="/users/sign_in?redirect_to_referer=yes">Sign in</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+
+<nav class='main-nav navbar-collapse collapse'>
+<div class='container'><ul>
+<li class="home"><a href="/fdroid/fdroidclient" title="Project">Activity
+</a></li><li class="active"><a href="/fdroid/fdroidclient/tree/master">Files</a>
+</li><li class=""><a href="/fdroid/fdroidclient/commits/master">Commits</a>
+</li><li class=""><a href="/fdroid/fdroidclient/network/master">Network</a>
+</li><li class=""><a href="/fdroid/fdroidclient/graphs/master">Graphs</a>
+</li><li class=""><a href="/fdroid/fdroidclient/issues">Issues
+<span class='count issue_counter'>47</span>
+</a></li><li class=""><a href="/fdroid/fdroidclient/merge_requests">Merge Requests
+<span class='count merge_counter'>1</span>
+</a></li></ul>
+</div>
+</nav>
+<div class='container'>
+<div class='content'><div class='tree-ref-holder'>
+<form accept-charset="UTF-8" action="/fdroid/fdroidclient/refs/switch" class="project-refs-form" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<select class="project-refs-select select2 select2-sm" id="ref" name="ref"><optgroup label="Branches"><option selected="selected" value="master">master</option>
+<option value="super-fdroid">super-fdroid</option></optgroup><optgroup label="Tags"><option value="db-version/41">db-version/41</option>
+<option value="db-version/40">db-version/40</option>
+<option value="db-version/39">db-version/39</option>
+<option value="db-version/37">db-version/37</option>
+<option value="db-version/35">db-version/35</option>
+<option value="db-version/34">db-version/34</option>
+<option value="db-version/33">db-version/33</option>
+<option value="db-version/32">db-version/32</option>
+<option value="db-version/31">db-version/31</option>
+<option value="db-version/30">db-version/30</option>
+<option value="db-version/29">db-version/29</option>
+<option value="db-version/28">db-version/28</option>
+<option value="db-version/27">db-version/27</option>
+<option value="db-version/26">db-version/26</option>
+<option value="db-version/25">db-version/25</option>
+<option value="db-version/24">db-version/24</option>
+<option value="db-version/23">db-version/23</option>
+<option value="db-version/22">db-version/22</option>
+<option value="db-version/21">db-version/21</option>
+<option value="db-version/20">db-version/20</option>
+<option value="db-version/19">db-version/19</option>
+<option value="db-version/18">db-version/18</option>
+<option value="db-version/17">db-version/17</option>
+<option value="db-version/16">db-version/16</option>
+<option value="0.71">0.71</option>
+<option value="0.70-test">0.70-test</option>
+<option value="0.69-test">0.69-test</option>
+<option value="0.68-test">0.68-test</option>
+<option value="0.67-test">0.67-test</option>
+<option value="0.66">0.66</option>
+<option value="0.65">0.65</option>
+<option value="0.64-test">0.64-test</option>
+<option value="0.63">0.63</option>
+<option value="0.62">0.62</option>
+<option value="0.61-test">0.61-test</option>
+<option value="0.60-test">0.60-test</option>
+<option value="0.59-test">0.59-test</option>
+<option value="0.58">0.58</option>
+<option value="0.57-test">0.57-test</option>
+<option value="0.56-test">0.56-test</option>
+<option value="0.55">0.55</option>
+<option value="0.54">0.54</option>
+<option value="0.53-test">0.53-test</option>
+<option value="0.52-test">0.52-test</option>
+<option value="0.51-test">0.51-test</option>
+<option value="0.50">0.50</option>
+<option value="0.49">0.49</option>
+<option value="0.48-test">0.48-test</option>
+<option value="0.47-test">0.47-test</option>
+<option value="0.46">0.46</option>
+<option value="0.45">0.45</option>
+<option value="0.44">0.44</option></optgroup></select>
+<input id="destination" name="destination" type="hidden" value="blob" />
+<input id="path" name="path" type="hidden" value="libs/android-support-v4.jar.LICENSE" />
+</form>
+
+
+</div>
+<div class='tree-holder' id='tree-holder'>
+<ul class='breadcrumb repo-breadcrumb'>
+<li>
+<i class='icon-angle-right'></i>
+<a href="/fdroid/fdroidclient/tree/master">fdroidclient
+</a></li>
+<li>
+<a href="/fdroid/fdroidclient/tree/master/libs">libs</a>
+</li>
+<li>
+<a href="/fdroid/fdroidclient/blob/master/libs/android-support-v4.jar.LICENSE"><strong>
+android-support-v4.jar.LICENSE
+</strong>
+</a></li>
+</ul>
+<ul class='blob-commit-info bs-callout bs-callout-info hidden-xs'>
+<li class='commit js-toggle-container'>
+<div class='commit-row-title'>
+<a class="commit_short_id" href="/fdroid/fdroidclient/commit/c819d56f188a04c6984ececa9a5f627e674b4ecc">c819d56f1</a>
+&nbsp;
+<span class='str-truncated'>
+<a class="commit-row-message" href="/fdroid/fdroidclient/commit/c819d56f188a04c6984ececa9a5f627e674b4ecc">add link to SDK references for android-support jar</a>
+<a class='text-expander js-toggle-button'>...</a>
+</span>
+<a class="pull-right" href="/fdroid/fdroidclient/tree/c819d56f188a04c6984ececa9a5f627e674b4ecc">Browse Code »</a>
+<div class='notes_count'>
+</div>
+</div>
+<div class='commit-row-description js-toggle-content'>
+<pre>&#x000A;I tried lots of things to make it more general, but the implementation of&#x000A;this jar properties file is just too simple, so no variables can be used.&#x000A;&#x000A;I renamed the other files related to android-support to match the naming&#x000A;scheme.</pre>
+</div>
+<div class='commit-row-info'>
+<a class="commit-author-link has_tooltip" data-original-title="hans@eds.org" href="/u/eighthave"><img alt="" class="avatar s16" src="https://gitlab.com//uploads/user/avatar/24982/rheadshot.png" width="16" /> <span class="commit-author-name">Hans-Christoph Steiner</span></a>
+<div class='committed_ago'>
+<time class='time_ago' data-placement='top' data-toggle='tooltip' datetime='2014-05-15T18:32:16Z' title='May 15, 2014 6:32pm'>2014-05-15 18:32:16 +0000</time>
+<script>$('.time_ago').timeago().tooltip()</script>
+ &nbsp;
+</div>
+</div>
+</li>
+
+</ul>
+<div class='tree-content-holder' id='tree-content-holder'>
+<article class='file-holder'>
+<div class='file-title clearfix'>
+<i class='icon-file'></i>
+<span class='file_name'>
+android-support-v4.jar.LICENSE
+<small>10.4 KB</small>
+</span>
+<span class='options hidden-xs'><div class='btn-group tree-btn-group'>
+<span class='btn btn-small disabled'>edit</span>
+<a class="btn btn-small" href="/fdroid/fdroidclient/raw/master/libs/android-support-v4.jar.LICENSE" target="_blank">raw</a>
+<a class="btn btn-small" href="/fdroid/fdroidclient/blame/master/libs/android-support-v4.jar.LICENSE">blame</a>
+<a class="btn btn-small" href="/fdroid/fdroidclient/commits/master/libs/android-support-v4.jar.LICENSE">history</a>
+</div>
+</span>
+</div>
+<div class='file-content code'>
+<div class='highlighted-data white'>
+<div class='line-numbers'>
+<a href="#L1" id="L1" rel="#L1"><i class='icon-link'></i>
+1
+</a><a href="#L2" id="L2" rel="#L2"><i class='icon-link'></i>
+2
+</a><a href="#L3" id="L3" rel="#L3"><i class='icon-link'></i>
+3
+</a><a href="#L4" id="L4" rel="#L4"><i class='icon-link'></i>
+4
+</a><a href="#L5" id="L5" rel="#L5"><i class='icon-link'></i>
+5
+</a><a href="#L6" id="L6" rel="#L6"><i class='icon-link'></i>
+6
+</a><a href="#L7" id="L7" rel="#L7"><i class='icon-link'></i>
+7
+</a><a href="#L8" id="L8" rel="#L8"><i class='icon-link'></i>
+8
+</a><a href="#L9" id="L9" rel="#L9"><i class='icon-link'></i>
+9
+</a><a href="#L10" id="L10" rel="#L10"><i class='icon-link'></i>
+10
+</a><a href="#L11" id="L11" rel="#L11"><i class='icon-link'></i>
+11
+</a><a href="#L12" id="L12" rel="#L12"><i class='icon-link'></i>
+12
+</a><a href="#L13" id="L13" rel="#L13"><i class='icon-link'></i>
+13
+</a><a href="#L14" id="L14" rel="#L14"><i class='icon-link'></i>
+14
+</a><a href="#L15" id="L15" rel="#L15"><i class='icon-link'></i>
+15
+</a><a href="#L16" id="L16" rel="#L16"><i class='icon-link'></i>
+16
+</a><a href="#L17" id="L17" rel="#L17"><i class='icon-link'></i>
+17
+</a><a href="#L18" id="L18" rel="#L18"><i class='icon-link'></i>
+18
+</a><a href="#L19" id="L19" rel="#L19"><i class='icon-link'></i>
+19
+</a><a href="#L20" id="L20" rel="#L20"><i class='icon-link'></i>
+20
+</a><a href="#L21" id="L21" rel="#L21"><i class='icon-link'></i>
+21
+</a><a href="#L22" id="L22" rel="#L22"><i class='icon-link'></i>
+22
+</a><a href="#L23" id="L23" rel="#L23"><i class='icon-link'></i>
+23
+</a><a href="#L24" id="L24" rel="#L24"><i class='icon-link'></i>
+24
+</a><a href="#L25" id="L25" rel="#L25"><i class='icon-link'></i>
+25
+</a><a href="#L26" id="L26" rel="#L26"><i class='icon-link'></i>
+26
+</a><a href="#L27" id="L27" rel="#L27"><i class='icon-link'></i>
+27
+</a><a href="#L28" id="L28" rel="#L28"><i class='icon-link'></i>
+28
+</a><a href="#L29" id="L29" rel="#L29"><i class='icon-link'></i>
+29
+</a><a href="#L30" id="L30" rel="#L30"><i class='icon-link'></i>
+30
+</a><a href="#L31" id="L31" rel="#L31"><i class='icon-link'></i>
+31
+</a><a href="#L32" id="L32" rel="#L32"><i class='icon-link'></i>
+32
+</a><a href="#L33" id="L33" rel="#L33"><i class='icon-link'></i>
+33
+</a><a href="#L34" id="L34" rel="#L34"><i class='icon-link'></i>
+34
+</a><a href="#L35" id="L35" rel="#L35"><i class='icon-link'></i>
+35
+</a><a href="#L36" id="L36" rel="#L36"><i class='icon-link'></i>
+36
+</a><a href="#L37" id="L37" rel="#L37"><i class='icon-link'></i>
+37
+</a><a href="#L38" id="L38" rel="#L38"><i class='icon-link'></i>
+38
+</a><a href="#L39" id="L39" rel="#L39"><i class='icon-link'></i>
+39
+</a><a href="#L40" id="L40" rel="#L40"><i class='icon-link'></i>
+40
+</a><a href="#L41" id="L41" rel="#L41"><i class='icon-link'></i>
+41
+</a><a href="#L42" id="L42" rel="#L42"><i class='icon-link'></i>
+42
+</a><a href="#L43" id="L43" rel="#L43"><i class='icon-link'></i>
+43
+</a><a href="#L44" id="L44" rel="#L44"><i class='icon-link'></i>
+44
+</a><a href="#L45" id="L45" rel="#L45"><i class='icon-link'></i>
+45
+</a><a href="#L46" id="L46" rel="#L46"><i class='icon-link'></i>
+46
+</a><a href="#L47" id="L47" rel="#L47"><i class='icon-link'></i>
+47
+</a><a href="#L48" id="L48" rel="#L48"><i class='icon-link'></i>
+48
+</a><a href="#L49" id="L49" rel="#L49"><i class='icon-link'></i>
+49
+</a><a href="#L50" id="L50" rel="#L50"><i class='icon-link'></i>
+50
+</a><a href="#L51" id="L51" rel="#L51"><i class='icon-link'></i>
+51
+</a><a href="#L52" id="L52" rel="#L52"><i class='icon-link'></i>
+52
+</a><a href="#L53" id="L53" rel="#L53"><i class='icon-link'></i>
+53
+</a><a href="#L54" id="L54" rel="#L54"><i class='icon-link'></i>
+54
+</a><a href="#L55" id="L55" rel="#L55"><i class='icon-link'></i>
+55
+</a><a href="#L56" id="L56" rel="#L56"><i class='icon-link'></i>
+56
+</a><a href="#L57" id="L57" rel="#L57"><i class='icon-link'></i>
+57
+</a><a href="#L58" id="L58" rel="#L58"><i class='icon-link'></i>
+58
+</a><a href="#L59" id="L59" rel="#L59"><i class='icon-link'></i>
+59
+</a><a href="#L60" id="L60" rel="#L60"><i class='icon-link'></i>
+60
+</a><a href="#L61" id="L61" rel="#L61"><i class='icon-link'></i>
+61
+</a><a href="#L62" id="L62" rel="#L62"><i class='icon-link'></i>
+62
+</a><a href="#L63" id="L63" rel="#L63"><i class='icon-link'></i>
+63
+</a><a href="#L64" id="L64" rel="#L64"><i class='icon-link'></i>
+64
+</a><a href="#L65" id="L65" rel="#L65"><i class='icon-link'></i>
+65
+</a><a href="#L66" id="L66" rel="#L66"><i class='icon-link'></i>
+66
+</a><a href="#L67" id="L67" rel="#L67"><i class='icon-link'></i>
+67
+</a><a href="#L68" id="L68" rel="#L68"><i class='icon-link'></i>
+68
+</a><a href="#L69" id="L69" rel="#L69"><i class='icon-link'></i>
+69
+</a><a href="#L70" id="L70" rel="#L70"><i class='icon-link'></i>
+70
+</a><a href="#L71" id="L71" rel="#L71"><i class='icon-link'></i>
+71
+</a><a href="#L72" id="L72" rel="#L72"><i class='icon-link'></i>
+72
+</a><a href="#L73" id="L73" rel="#L73"><i class='icon-link'></i>
+73
+</a><a href="#L74" id="L74" rel="#L74"><i class='icon-link'></i>
+74
+</a><a href="#L75" id="L75" rel="#L75"><i class='icon-link'></i>
+75
+</a><a href="#L76" id="L76" rel="#L76"><i class='icon-link'></i>
+76
+</a><a href="#L77" id="L77" rel="#L77"><i class='icon-link'></i>
+77
+</a><a href="#L78" id="L78" rel="#L78"><i class='icon-link'></i>
+78
+</a><a href="#L79" id="L79" rel="#L79"><i class='icon-link'></i>
+79
+</a><a href="#L80" id="L80" rel="#L80"><i class='icon-link'></i>
+80
+</a><a href="#L81" id="L81" rel="#L81"><i class='icon-link'></i>
+81
+</a><a href="#L82" id="L82" rel="#L82"><i class='icon-link'></i>
+82
+</a><a href="#L83" id="L83" rel="#L83"><i class='icon-link'></i>
+83
+</a><a href="#L84" id="L84" rel="#L84"><i class='icon-link'></i>
+84
+</a><a href="#L85" id="L85" rel="#L85"><i class='icon-link'></i>
+85
+</a><a href="#L86" id="L86" rel="#L86"><i class='icon-link'></i>
+86
+</a><a href="#L87" id="L87" rel="#L87"><i class='icon-link'></i>
+87
+</a><a href="#L88" id="L88" rel="#L88"><i class='icon-link'></i>
+88
+</a><a href="#L89" id="L89" rel="#L89"><i class='icon-link'></i>
+89
+</a><a href="#L90" id="L90" rel="#L90"><i class='icon-link'></i>
+90
+</a><a href="#L91" id="L91" rel="#L91"><i class='icon-link'></i>
+91
+</a><a href="#L92" id="L92" rel="#L92"><i class='icon-link'></i>
+92
+</a><a href="#L93" id="L93" rel="#L93"><i class='icon-link'></i>
+93
+</a><a href="#L94" id="L94" rel="#L94"><i class='icon-link'></i>
+94
+</a><a href="#L95" id="L95" rel="#L95"><i class='icon-link'></i>
+95
+</a><a href="#L96" id="L96" rel="#L96"><i class='icon-link'></i>
+96
+</a><a href="#L97" id="L97" rel="#L97"><i class='icon-link'></i>
+97
+</a><a href="#L98" id="L98" rel="#L98"><i class='icon-link'></i>
+98
+</a><a href="#L99" id="L99" rel="#L99"><i class='icon-link'></i>
+99
+</a><a href="#L100" id="L100" rel="#L100"><i class='icon-link'></i>
+100
+</a><a href="#L101" id="L101" rel="#L101"><i class='icon-link'></i>
+101
+</a><a href="#L102" id="L102" rel="#L102"><i class='icon-link'></i>
+102
+</a><a href="#L103" id="L103" rel="#L103"><i class='icon-link'></i>
+103
+</a><a href="#L104" id="L104" rel="#L104"><i class='icon-link'></i>
+104
+</a><a href="#L105" id="L105" rel="#L105"><i class='icon-link'></i>
+105
+</a><a href="#L106" id="L106" rel="#L106"><i class='icon-link'></i>
+106
+</a><a href="#L107" id="L107" rel="#L107"><i class='icon-link'></i>
+107
+</a><a href="#L108" id="L108" rel="#L108"><i class='icon-link'></i>
+108
+</a><a href="#L109" id="L109" rel="#L109"><i class='icon-link'></i>
+109
+</a><a href="#L110" id="L110" rel="#L110"><i class='icon-link'></i>
+110
+</a><a href="#L111" id="L111" rel="#L111"><i class='icon-link'></i>
+111
+</a><a href="#L112" id="L112" rel="#L112"><i class='icon-link'></i>
+112
+</a><a href="#L113" id="L113" rel="#L113"><i class='icon-link'></i>
+113
+</a><a href="#L114" id="L114" rel="#L114"><i class='icon-link'></i>
+114
+</a><a href="#L115" id="L115" rel="#L115"><i class='icon-link'></i>
+115
+</a><a href="#L116" id="L116" rel="#L116"><i class='icon-link'></i>
+116
+</a><a href="#L117" id="L117" rel="#L117"><i class='icon-link'></i>
+117
+</a><a href="#L118" id="L118" rel="#L118"><i class='icon-link'></i>
+118
+</a><a href="#L119" id="L119" rel="#L119"><i class='icon-link'></i>
+119
+</a><a href="#L120" id="L120" rel="#L120"><i class='icon-link'></i>
+120
+</a><a href="#L121" id="L121" rel="#L121"><i class='icon-link'></i>
+121
+</a><a href="#L122" id="L122" rel="#L122"><i class='icon-link'></i>
+122
+</a><a href="#L123" id="L123" rel="#L123"><i class='icon-link'></i>
+123
+</a><a href="#L124" id="L124" rel="#L124"><i class='icon-link'></i>
+124
+</a><a href="#L125" id="L125" rel="#L125"><i class='icon-link'></i>
+125
+</a><a href="#L126" id="L126" rel="#L126"><i class='icon-link'></i>
+126
+</a><a href="#L127" id="L127" rel="#L127"><i class='icon-link'></i>
+127
+</a><a href="#L128" id="L128" rel="#L128"><i class='icon-link'></i>
+128
+</a><a href="#L129" id="L129" rel="#L129"><i class='icon-link'></i>
+129
+</a><a href="#L130" id="L130" rel="#L130"><i class='icon-link'></i>
+130
+</a><a href="#L131" id="L131" rel="#L131"><i class='icon-link'></i>
+131
+</a><a href="#L132" id="L132" rel="#L132"><i class='icon-link'></i>
+132
+</a><a href="#L133" id="L133" rel="#L133"><i class='icon-link'></i>
+133
+</a><a href="#L134" id="L134" rel="#L134"><i class='icon-link'></i>
+134
+</a><a href="#L135" id="L135" rel="#L135"><i class='icon-link'></i>
+135
+</a><a href="#L136" id="L136" rel="#L136"><i class='icon-link'></i>
+136
+</a><a href="#L137" id="L137" rel="#L137"><i class='icon-link'></i>
+137
+</a><a href="#L138" id="L138" rel="#L138"><i class='icon-link'></i>
+138
+</a><a href="#L139" id="L139" rel="#L139"><i class='icon-link'></i>
+139
+</a><a href="#L140" id="L140" rel="#L140"><i class='icon-link'></i>
+140
+</a><a href="#L141" id="L141" rel="#L141"><i class='icon-link'></i>
+141
+</a><a href="#L142" id="L142" rel="#L142"><i class='icon-link'></i>
+142
+</a><a href="#L143" id="L143" rel="#L143"><i class='icon-link'></i>
+143
+</a><a href="#L144" id="L144" rel="#L144"><i class='icon-link'></i>
+144
+</a><a href="#L145" id="L145" rel="#L145"><i class='icon-link'></i>
+145
+</a><a href="#L146" id="L146" rel="#L146"><i class='icon-link'></i>
+146
+</a><a href="#L147" id="L147" rel="#L147"><i class='icon-link'></i>
+147
+</a><a href="#L148" id="L148" rel="#L148"><i class='icon-link'></i>
+148
+</a><a href="#L149" id="L149" rel="#L149"><i class='icon-link'></i>
+149
+</a><a href="#L150" id="L150" rel="#L150"><i class='icon-link'></i>
+150
+</a><a href="#L151" id="L151" rel="#L151"><i class='icon-link'></i>
+151
+</a><a href="#L152" id="L152" rel="#L152"><i class='icon-link'></i>
+152
+</a><a href="#L153" id="L153" rel="#L153"><i class='icon-link'></i>
+153
+</a><a href="#L154" id="L154" rel="#L154"><i class='icon-link'></i>
+154
+</a><a href="#L155" id="L155" rel="#L155"><i class='icon-link'></i>
+155
+</a><a href="#L156" id="L156" rel="#L156"><i class='icon-link'></i>
+156
+</a><a href="#L157" id="L157" rel="#L157"><i class='icon-link'></i>
+157
+</a><a href="#L158" id="L158" rel="#L158"><i class='icon-link'></i>
+158
+</a><a href="#L159" id="L159" rel="#L159"><i class='icon-link'></i>
+159
+</a><a href="#L160" id="L160" rel="#L160"><i class='icon-link'></i>
+160
+</a><a href="#L161" id="L161" rel="#L161"><i class='icon-link'></i>
+161
+</a><a href="#L162" id="L162" rel="#L162"><i class='icon-link'></i>
+162
+</a><a href="#L163" id="L163" rel="#L163"><i class='icon-link'></i>
+163
+</a><a href="#L164" id="L164" rel="#L164"><i class='icon-link'></i>
+164
+</a><a href="#L165" id="L165" rel="#L165"><i class='icon-link'></i>
+165
+</a><a href="#L166" id="L166" rel="#L166"><i class='icon-link'></i>
+166
+</a><a href="#L167" id="L167" rel="#L167"><i class='icon-link'></i>
+167
+</a><a href="#L168" id="L168" rel="#L168"><i class='icon-link'></i>
+168
+</a><a href="#L169" id="L169" rel="#L169"><i class='icon-link'></i>
+169
+</a><a href="#L170" id="L170" rel="#L170"><i class='icon-link'></i>
+170
+</a><a href="#L171" id="L171" rel="#L171"><i class='icon-link'></i>
+171
+</a><a href="#L172" id="L172" rel="#L172"><i class='icon-link'></i>
+172
+</a><a href="#L173" id="L173" rel="#L173"><i class='icon-link'></i>
+173
+</a><a href="#L174" id="L174" rel="#L174"><i class='icon-link'></i>
+174
+</a><a href="#L175" id="L175" rel="#L175"><i class='icon-link'></i>
+175
+</a><a href="#L176" id="L176" rel="#L176"><i class='icon-link'></i>
+176
+</a><a href="#L177" id="L177" rel="#L177"><i class='icon-link'></i>
+177
+</a><a href="#L178" id="L178" rel="#L178"><i class='icon-link'></i>
+178
+</a><a href="#L179" id="L179" rel="#L179"><i class='icon-link'></i>
+179
+</a><a href="#L180" id="L180" rel="#L180"><i class='icon-link'></i>
+180
+</a><a href="#L181" id="L181" rel="#L181"><i class='icon-link'></i>
+181
+</a><a href="#L182" id="L182" rel="#L182"><i class='icon-link'></i>
+182
+</a><a href="#L183" id="L183" rel="#L183"><i class='icon-link'></i>
+183
+</a><a href="#L184" id="L184" rel="#L184"><i class='icon-link'></i>
+184
+</a><a href="#L185" id="L185" rel="#L185"><i class='icon-link'></i>
+185
+</a><a href="#L186" id="L186" rel="#L186"><i class='icon-link'></i>
+186
+</a><a href="#L187" id="L187" rel="#L187"><i class='icon-link'></i>
+187
+</a><a href="#L188" id="L188" rel="#L188"><i class='icon-link'></i>
+188
+</a><a href="#L189" id="L189" rel="#L189"><i class='icon-link'></i>
+189
+</a><a href="#L190" id="L190" rel="#L190"><i class='icon-link'></i>
+190
+</a></div>
+<div class='highlight'>
+<pre><code class='language-LICENSE'>Copyright (c) 2005-2013, The Android Open Source Project
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS</code></pre>
+</div>
+</div>
+
+</div>
+
+</article>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
