@@ -3,9 +3,7 @@
     android:versionCode="5"
     android:versionName="1.51" >
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="19" />
+    <uses-sdk android:targetSdkVersion="19" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -13,7 +11,7 @@
         android:allowBackup="true"
         android:theme="@android:style/Theme.NoTitleBar"> <!--  android:debuggable="true" -->
         <activity android:name="com.kklop.ghostmode.GhostMenu" android:theme="@style/AppTheme">
-            <intent-filter>                
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -24,7 +22,7 @@
         </activity>
         <activity android:name="com.kklop.ghostmode.HighScore" android:theme="@style/AppTheme"></activity>
         <activity android:theme="@style/AppTheme" android:name="com.kklop.ghostmode.About"></activity>
-        
+
     </application>
 
 </manifest>
