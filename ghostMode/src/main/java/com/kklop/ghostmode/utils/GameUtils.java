@@ -19,5 +19,12 @@
 package com.kklop.ghostmode.utils;
 
 public class GameUtils {
-
+    public static final int getGridSize(int size) {
+        for (int i = size / 30; i > 0; i--) {
+            if (size % i == 0) {
+                return i;
+            }
+        }
+        return size;
+    }
 }

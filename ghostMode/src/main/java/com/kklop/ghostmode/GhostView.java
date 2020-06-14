@@ -78,6 +78,7 @@ import com.kklop.ghostmode.sound.SoundHelper;
 import com.kklop.ghostmode.sound.SoundService;
 import com.kklop.ghostmode.state.GameState;
 import com.kklop.ghostmode.utils.Constants;
+import com.kklop.ghostmode.utils.GameUtils;
 import com.kklop.ghostmode.utils.PropertyManager;
 
 public class GhostView extends SurfaceView implements SurfaceHolder.Callback {
@@ -306,7 +307,7 @@ public class GhostView extends SurfaceView implements SurfaceHolder.Callback {
 			// initialize the grid
 			try {
 				this.grid = new Grid(mBackgroundImage.getWidth(),
-						mBackgroundImage.getHeight(), 100);
+						mBackgroundImage.getHeight(), GameUtils.getGridSize(mBackgroundImage.getWidth()));
 				this.grid.addSprite(mGhost);
 			}
 			catch(GridException g) {

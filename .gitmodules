@@ -1,0 +1,3 @@
+[submodule "AnGmEngine"]
+	path = AnGmEngine
+	url = git@github.com:kklopfenstein/AnGmEngine.git
