@@ -76,12 +76,11 @@ public class GhostMenu extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
-	    switch (item.getItemId()) {
-	        case R.id.about:
-	            startAbout();
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
+		int itemId = item.getItemId();
+		if (itemId == R.id.about) {
+			startAbout();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    namespace "com.kklop.ghostmode"
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.kklop.ghostmode"
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdkVersion 34
     }
 
     buildTypes {
@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    implementation project(':AnGmEngine')
+//    implementation project(':AnGmEngine')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
